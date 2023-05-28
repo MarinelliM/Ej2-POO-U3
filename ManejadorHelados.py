@@ -75,14 +75,8 @@ class ManejaHelados:
                     sabores[sabor.getnombre()] += 1
         
         # Ordenar los sabores en función de las veces que se han pedido (de mayor a menor)
-        #saboresOrdenados = sorted(sabores, reverse=False)
-        # saboresOrdenados = sorted(sabores.items(), key=lambda x: x[1], reverse=True)
-        # print(saboresOrdenados)
-        saboresOrdenados = list(sabores.items())
-        saboresOrdenados.sort(key=lambda x: x[1], reverse=True)
+        saboresOrdenados = sorted(sabores.items(), key=lambda x: x[1], reverse=True)
         print(saboresOrdenados)
-        saboresNombresOrdenados = [sabor[0] for sabor in saboresOrdenados]
-        print(saboresNombresOrdenados)
         # Mostrar los 5 sabores más pedidos
         print('\n')
         print('Sabores más pedidos:')
