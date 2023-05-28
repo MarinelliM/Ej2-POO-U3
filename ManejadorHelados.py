@@ -8,21 +8,6 @@ class ManejaHelados:
     def __init__(self) -> None:
         self.__lista = []
         pass
-
-    def initmh(self):
-        with open('pedidos.csv','r',encoding='utf8') as archivo:
-            reader = csv.reader(archivo,delimiter=';')
-            next(reader)
-            for fila in reader:
-                gramos = int(fila[0])
-                if fila[1] != '':
-                    precio = int(fila[1])
-                else: precio = None
-                sabores = fila[2].split(',')
-                pedido = Helado(gramos,precio,sabores)
-                # for sabor in sabores:
-                #     pedido.addSabor(sabor)
-                self.__lista.append(pedido)
     
     def test(self):
         i = 0
@@ -98,8 +83,6 @@ class ManejaHelados:
         print(saboresOrdenados)
         saboresNombresOrdenados = [sabor[0] for sabor in saboresOrdenados]
         print(saboresNombresOrdenados)
-        # saboresOrdenados = sorted(sabores.items(), key=operator.itemgetter(1), reverse=True)
-        # print(saboresOrdenados)
         # Mostrar los 5 sabores más pedidos
         print('\n')
         print('Sabores más pedidos:')
