@@ -22,16 +22,9 @@ class Helado:
         if sabor != None:
             self.addSabor(sabor,1)
         pass
-    #cantidad = 1
     def addSabor(self,sabor, cantidad):
         for e in range(cantidad):
             self.__sabores.append(sabor)
-        # if sabor is type(list):
-        #     for i in range(len(sabor)):
-        #         self.__sabores.append(sabor[i])
-        # elif sabor is type(str): 
-        #     for i in range(cantidad):
-        #         self.__sabores.append(sabor)
 
     def getgramos(self):
         return self.__gramos
@@ -45,10 +38,6 @@ class Helado:
     
     def gets(self):
         return self.__sabores
-    
-    # def getsabores(self):
-    #     a = self.__sabores
-    #     return a
     
     def mostrar(self):
         print('Gramos: {}' .format(self.getgramos()))
