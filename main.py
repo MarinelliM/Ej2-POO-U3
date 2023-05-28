@@ -3,9 +3,6 @@ from ManejadorSabores import ManejaSabores
 from Menu import menu
 if __name__=='__main__':
     MH = ManejaHelados()
-    #MH.initmh()
-    #a = input('ingrese valor:')
-    #MH.test()
     MH.test2()
     print('\n')
 
